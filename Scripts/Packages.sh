@@ -135,7 +135,19 @@ UPDATE_VERSION() {
 
 #UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
 #UPDATE_VERSION "sing-box"
-
+# === 打印机支持 ===
+UPDATE_PACKAGE "luci-app-usb-printer" "OpenWrt/luci-app-usb-printer" "master"
+UPDATE_PACKAGE "luci-app-p910nd" "OpenWrt/luci-app-p910nd" "master"
+# === 新增基础功能 ===
+UPDATE_PACKAGE "luci-app-upnp" "OpenWrt/luci-app-upnp" "master"
+UPDATE_PACKAGE "luci-app-ddns" "OpenWrt/luci-app-ddns" "master"
+UPDATE_PACKAGE "luci-app-nat-masq" "OpenWrt/luci-app-nat-masq" "master"
+UPDATE_PACKAGE "luci-app-turboacc" "OpenWrt/luci-app-turboacc" "master"
+UPDATE_PACKAGE "luci-app-sqm" "OpenWrt/luci-app-sqm" "master"
+UPDATE_PACKAGE "luci-app-samba4" "OpenWrt/luci-app-samba4" "master"
+UPDATE_PACKAGE "luci-app-nfs" "OpenWrt/luci-app-nfs" "master"
+UPDATE_PACKAGE "luci-app-webdav" "OpenWrt/luci-app-webdav" "master"
+UPDATE_PACKAGE "adguardhome" "AdguardTeam/AdGuardHome" "master" "" "luci-app-adguardhome"
 #引入私有扩展脚本
 if [ -f "$GITHUB_WORKSPACE/Scripts/PRIVATE.sh" ]; then
 	source "$GITHUB_WORKSPACE/Scripts/PRIVATE.sh"
